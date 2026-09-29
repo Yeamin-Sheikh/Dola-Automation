@@ -16,9 +16,10 @@ const localConfig = {
     "submitButton": "button#flow-end-msg-send",
     "loadingButton": "div:not([class*=\"!hidden\"]) > svg:has(path[d^=\"M12 0.5C18.3513 0.5 23.5 5.64873 23.5 12C23.5 18.3513 18.3513 23.5\"])",
     "outputItems": "[data-message-id]:last()",
-    "imagesContainer": "[data-message-id]:last() img[alt=\"image\"][loading=\"lazy\"]",
+    "imagesContainer": "[data-message-id]:last() img[alt=\"image\"][loading=\"lazy\"], [data-message-id]:last() img",
     "downloadImageTooltipButton": "button:has(path[d^=\"M20.375 14.8535C20.9273 14.8535 21.375 15.3012 21.375 15.8535V18.5059C21.375 20.1627 20.0319 21.5059\"])",
     "closeDialogImage": "div[aria-describedby]:has(path[d^=\"M19.4801 4.51824C19.8706 4.90868 19.8704 5.54191 19.4801 5.93245L13.418 11.9946L19.4836 18.0603C19.8741\"]:last()",
+    "videoContainer": "[data-message-id]:last() video, [data-message-id]:last() div:has(video)",
     "uploadImageProgress": "div[role=\"progressbar\"]"
   }
 };
