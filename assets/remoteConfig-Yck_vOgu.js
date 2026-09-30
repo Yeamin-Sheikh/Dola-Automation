@@ -1,5 +1,5 @@
 const localConfig = {
-  "version": "1.0.5, 1.0.6, 1.0.7, 1.0.8, 1.0.9, 1.0",
+  "version": "1.0.5, 1.0.6, 1.0.7, 1.0.8, 1.0.9, 1.0, 1.1",
   "hash": "pmjfhrekwfjaaeetwl23kfssseew34k2e",
   "selectors": {
     "newChat": "div[class*=\"nav-link\"]:has(path[d^=\"M12.6221 1.01074C15.6967 1.11689 18.2352 2.0152 20.0479\"])",

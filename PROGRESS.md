@@ -1,5 +1,29 @@
 # Progress tracking: Dola Automation
 
+### 2026-09-30: Video download extraction fix and v1.1 release
+
+**Status:** Done
+
+#### What changed
+- Fixed video output extraction: Bypassed image inspection modal click routine for `ToVideo` modes
+- Added multi-tier video URL extraction across `<video>`, `<source>`, `currentSrc`, `src`, and `data-src`
+- Added direct DOM anchor downloading for `blob:` and `data:` URLs
+- Added automatic fetch fallback in content script if service worker download fails
+- Fixed background filename listener to tolerate URL query strings (`?expires=...`) and avoid duplicate filename prefixes
+- Added `videoContainer` selector and broadened `imagesContainer` in selector configs
+- Bumped extension version to 1.1 in `manifest.json`, configs, and documentation
+- Repackaged `Dola-Automation-v1.1.zip` and published GitHub release `v1.1`
+
+#### Files touched
+- `manifest.json`: Bumped version to 1.1
+- `assets/index.ts--uRBGhw2.js`: Video extraction and direct download pipeline
+- `assets/index.ts-Bpxv7r_4.js`: Query-string tolerant filename listener
+- `assets/remoteConfig-Yck_vOgu.js`: Added videoContainer and expanded imagesContainer
+- `downloaded_config.json`: Updated selector mirror and version
+- `README.md`: Updated release badges and install instructions
+
+---
+
 ### 2026-09-29: Initial modernization, offline autonomy, and v1.0 release
 
 **Status:** Done
