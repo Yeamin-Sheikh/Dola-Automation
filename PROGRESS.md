@@ -5,8 +5,10 @@
 **Status:** Done
 
 #### What changed
-- Fixed premature completion detection: Isolated `isVideo` polling to strictly check for `<video>` elements, removing fallback to `img` tags
-- Resolved input reference image download issue where Image-to-Video prompts downloaded the uploaded `.png` instead of waiting for the rendered video
+- Identified Dola lazy video rendering: Dola outputs `.block-video-...` cards without inserting `<video>` DOM tags until clicked
+- Updated video readiness detector to match `div[class*="block-video"]`, `div[class*="video-hover"]`, and `.play-icon-wrapper`
+- Added programmatic video card activation click to mount Dola's native canvas panel and trigger native Save button + direct MP4 stream download
+- Isolated `isVideo` polling to strictly check for video elements and containers, removing fallback to `img` tags
 - Added safeguard in download dispatcher to reject image URLs when running in video generation mode
 - Bumped extension version to 1.2 across `manifest.json`, configs, and documentation
 - Repackaged `Dola-Automation-v1.2.zip` and published GitHub release `v1.2`
