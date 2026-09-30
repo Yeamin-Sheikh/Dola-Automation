@@ -1,5 +1,25 @@
 # Progress tracking: Dola Automation
 
+### 2026-09-30: Fix premature video generation completion and input image grabbing (v1.2)
+
+**Status:** Done
+
+#### What changed
+- Fixed premature completion detection: Isolated `isVideo` polling to strictly check for `<video>` elements, removing fallback to `img` tags
+- Resolved input reference image download issue where Image-to-Video prompts downloaded the uploaded `.png` instead of waiting for the rendered video
+- Added safeguard in download dispatcher to reject image URLs when running in video generation mode
+- Bumped extension version to 1.2 across `manifest.json`, configs, and documentation
+- Repackaged `Dola-Automation-v1.2.zip` and published GitHub release `v1.2`
+
+#### Files touched
+- `manifest.json`: Bumped version to 1.2
+- `assets/index.ts--uRBGhw2.js`: Isolated video completion detector and media URL safeguard
+- `assets/remoteConfig-Yck_vOgu.js`: Updated version string
+- `downloaded_config.json`: Updated version string
+- `README.md`: Updated release badges and install instructions
+
+---
+
 ### 2026-09-30: Video download extraction fix and v1.1 release
 
 **Status:** Done
